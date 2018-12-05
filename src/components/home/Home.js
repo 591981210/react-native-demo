@@ -48,7 +48,7 @@ export default class Home extends Component {
                                 resizeMode="stretch"
                                 source={{
                                     uri:
-                                        "http://www.webhek.com/wordpress/wp-content/uploads/2018/04/headless-browsers-300x280.png"
+                                        "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2539661066.jpg"
                                 }}
                             />
                         </View>
@@ -58,7 +58,7 @@ export default class Home extends Component {
                                 resizeMode="stretch"
                                 source={{
                                     uri:
-                                        "http://www.webhek.com/wordpress/wp-content/uploads/2018/03/slid1-300x280.jpg"
+                                        "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537158013.jpg"
                                 }}
                             />
                         </View>
@@ -68,7 +68,7 @@ export default class Home extends Component {
                                 resizeMode="stretch"
                                 source={{
                                     uri:
-                                        "http://www.webhek.com/wordpress/wp-content/uploads/2018/01/ES6-the-bits-youll-actually-use-300x280.png"
+                                        "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2537667301.jpg"
                                 }}
                             />
                         </View>

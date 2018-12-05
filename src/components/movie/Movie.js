@@ -1,7 +1,8 @@
-import React, {Component} from "react";
-import {ScrollView, View, Text, ActivityIndicator} from "react-native";
+import React, { Component } from "react";
+import { ScrollView, View, ActivityIndicator } from "react-native";
 
 //导入自定义的无状态的组件
+import MovieTypeView from "./view/MovieTypeView";
 
 export default class Movie extends Component {
     constructor(props) {
@@ -27,6 +28,8 @@ export default class Movie extends Component {
                 res => res.json()
             )
         ]).then(results => {
+            console.log(111)
+            console.log(results)
             this.setState({
                 isLoading: false,
                 inTheatersList: results[0].subjects,
@@ -35,17 +38,40 @@ export default class Movie extends Component {
             });
         });
     }
-
     render() {
         if (this.state.isLoading) {
             //正在加载
-            return <ActivityIndicator size="large" color="#0000ff"/>;
+            return <ActivityIndicator size="large" color="#0000ff" />;
         } else {
             return (
                 <ScrollView>
-                    <Text>{this.state.inTheatersList[0].title}</Text>
-                    <Text>{this.state.comingSoonList[0].title}</Text>
-                    <Text>{this.state.top250List[0].title}</Text>
+                    {/* 1.0 正在热映 */}
+                    <MovieTypeView
+                        title="正在热映"
+                        movieList={this.state.inTheatersList}
+                        movieType="in_theaters"
+                        navigation={this.props.navigation}
+                    />
+
+                    {/* 2.0 即将热映 */}
+                    <View style={{ marginTop: 20 }}>
+                        <MovieTypeView
+                            title="即将热映"
+                            movieList={this.state.comingSoonList}
+                            movieType="coming_soon"
+                            navigation={this.props.navigation}
+                        />
+                    </View>
+
+                    {/* 3.0 top250 */}
+                    <View style={{ marginTop: 20 }}>
+                        <MovieTypeView
+                            title="top250"
+                            movieList={this.state.top250List}
+                            movieType="top250"
+                            navigation={this.props.navigation}
+                        />
+                    </View>
                 </ScrollView>
             );
         }
