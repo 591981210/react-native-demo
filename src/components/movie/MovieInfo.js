@@ -56,7 +56,7 @@ export default class MovieList extends Component {
             />
           </View>
           <Text style={{ fontSize: 20, marginTop: 20 }}>主要演员:</Text>
-          <View style={{ flexDirection: "row", marginTop: 10 }}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{marginTop: 10 }}>
             {this.state.movieInfo.casts.map((item, key) => {
               return (
                 <View style={{ alignItems: "center" }}>
@@ -75,7 +75,7 @@ export default class MovieList extends Component {
                 </View>
               );
             })}
-          </View>
+          </ScrollView>
           <Text style={{ fontSize: 20, marginTop: 20 }}>电影简介:</Text>
           <Text
             style={{ fontSize: 14, color: "#666", padding: 10, lineHeight: 35 }}
