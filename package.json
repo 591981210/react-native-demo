@@ -10,7 +10,8 @@
     "react": "16.6.0-alpha.8af6728",
     "react-native": "0.57.4",
     "react-navigation": "^2.18.2",
-    "react-native-looped-carousel": "^0.1.13"
+    "react-native-looped-carousel": "^0.1.13",
+    "react-native-refresh-list-view": "^1.0.10"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
