@@ -76,15 +76,15 @@ export default class Home extends Component {
                 </View>
 
                 {/* 2.0 自定义导航条 */}
-                <View style={styles.navigator}>
-                    <Text>首 页</Text>
-                    <Text onPress={()=>{
-                        this.props.navigation.navigate('Movie')
-                    }}>电 影</Text>
-                    <Text onPress={()=>{
-                        this.props.navigation.navigate('Mine')
-                    }}>我 的</Text>
-                </View>
+                {/*<View style={styles.navigator}>*/}
+                    {/*<Text>首 页</Text>*/}
+                    {/*<Text onPress={()=>{*/}
+                        {/*this.props.navigation.navigate('Movie')*/}
+                    {/*}}>电 影</Text>*/}
+                    {/*<Text onPress={()=>{*/}
+                        {/*this.props.navigation.navigate('Mine')*/}
+                    {/*}}>我 的</Text>*/}
+                {/*</View>*/}
             </View>
         );
     }

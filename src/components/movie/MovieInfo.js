@@ -59,7 +59,7 @@ export default class MovieList extends Component {
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{marginTop: 10 }}>
             {this.state.movieInfo.casts.map((item, key) => {
               return (
-                <View style={{ alignItems: "center" }}>
+                <View style={{ alignItems: "center" }} key={item.id}>
                   <Image
                     source={{ uri: item.avatars.small }}
                     style={{
